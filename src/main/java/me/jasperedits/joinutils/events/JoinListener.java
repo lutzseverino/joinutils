@@ -11,7 +11,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import me.jasperedits.joinutils.core.Main;
 import me.jasperedits.joinutils.core.Motd;
 
-public class EVENTSJoin  implements Listener {
+public class JoinListener  implements Listener {
 
 	@EventHandler
 	public void PlayerJoin(PlayerJoinEvent e) {

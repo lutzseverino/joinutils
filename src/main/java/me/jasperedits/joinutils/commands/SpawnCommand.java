@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 
 import me.jasperedits.joinutils.core.Main;
 
-public class CMDSpawn implements CommandExecutor {
+public class SpawnCommand implements CommandExecutor {
 
 	@Override 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {

@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 
 import me.jasperedits.joinutils.core.Main;
 
-public class CMDReload implements CommandExecutor {
+public class ReloadCommand implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

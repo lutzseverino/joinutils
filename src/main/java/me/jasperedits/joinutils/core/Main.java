@@ -6,7 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.jasperedits.joinutils.events.EVENTSJoin;
+import me.jasperedits.joinutils.events.JoinListener;
 
 public class Main extends JavaPlugin {
 
@@ -19,9 +19,9 @@ public class Main extends JavaPlugin {
 		getServer().getConsoleSender().sendMessage("\n§8§m-------------------------------------------"
 				+ "\n\n§aJoinUtils enabled.\n\n"
 				+ "§8§m-------------------------------------------");
-		getCommand("spawn").setExecutor(new me.jasperedits.joinutils.commands.CMDSpawn());
-		getCommand("jureload").setExecutor(new me.jasperedits.joinutils.commands.CMDReload());
-		getServer().getPluginManager().registerEvents(new EVENTSJoin(), this);
+		getCommand("spawn").setExecutor(new me.jasperedits.joinutils.commands.SpawnCommand());
+		getCommand("jureload").setExecutor(new me.jasperedits.joinutils.commands.ReloadCommand());
+		getServer().getPluginManager().registerEvents(new JoinListener(), this);
 	}
 
 	public void onDisable() {
