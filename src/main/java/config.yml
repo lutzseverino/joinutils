@@ -18,7 +18,8 @@ modules:
     
 motd:
    - "&aMOTD example."
-
+   - "&eYou can add multiple lines."
+   
 messages:
    spawncmd:
       onlyplayers: "&cThis command can only be executed by a player."
