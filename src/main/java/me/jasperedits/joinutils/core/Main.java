@@ -15,7 +15,7 @@ public class Main extends JavaPlugin {
 		instance = this;
 
 		getServer().getConsoleSender().sendMessage("\n§8§m-------------------------------------------"
-				+ "\n\n§aSimpleSpawn enabled.\n\n"
+				+ "\n\n§aJoinUtils enabled.\n\n"
 				+ "§8§m-------------------------------------------");
 		getCommand("spawn").setExecutor(new me.jasperedits.joinutils.commands.CMDSpawn());
 		getServer().getPluginManager().registerEvents(new EVENTSJoin(), this);
@@ -23,7 +23,7 @@ public class Main extends JavaPlugin {
 
 	public void onDisable() {
 		getServer().getConsoleSender().sendMessage("\n§8§m-------------------------------------------"
-				+ "\n\n§aSimpleSpawn disabled.\n\n"
+				+ "\n\n§aJoinUtils disabled.\n\n"
 				+ "§8§m-------------------------------------------");
 	}
 

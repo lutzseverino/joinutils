@@ -20,8 +20,8 @@ motd:
    - "&aMOTD example."
    - "&eYou can add multiple lines."
    
-messages:
-   spawncmd:
+messages: # Set it to "0" or 0 to disable the message.
+   spawncmd:  
       onlyplayers: "&cThis command can only be executed by a player."
       teleporting: "&aTeleporting to spawn."
       disabled: "&cThis command is disabled."

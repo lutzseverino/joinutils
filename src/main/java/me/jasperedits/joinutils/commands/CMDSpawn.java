@@ -14,8 +14,10 @@ public class CMDSpawn implements CommandExecutor {
 	@Override 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if (Main.getInstance().getConfig().getBoolean("modules.spawncmd")) {
-		if (!(sender instanceof Player)) {
-			sender.sendMessage(Main.c((Main.getInstance().getConfig().getString("messages.spawncmd.onlyplayers"))));
+			if (!(sender instanceof Player)) {
+				if (!(Main.getInstance().getConfig().getString("messages.spawncmd.onlyplayers").equals("0"))) {
+					sender.sendMessage(Main.c((Main.getInstance().getConfig().getString("messages.spawncmd.onlyplayers"))));
+				}
 			} else {
 				Player p = (Player) sender;	
 				Location loc = new Location(Bukkit.getWorld(Main.getInstance().getConfig().getString("spawn.world")), 
@@ -25,9 +27,11 @@ public class CMDSpawn implements CommandExecutor {
 				loc.setYaw(Main.getInstance().getConfig().getInt("spawn.yaw"));
 				loc.setPitch(Main.getInstance().getConfig().getInt("spawn.pitch"));
 				p.teleport(loc);
-				p.sendMessage(Main.c((Main.getInstance().getConfig().getString("messages.spawncmd.teleporting"))));
+				if (!(Main.getInstance().getConfig().getString("messages.spawncmd.teleporting").equals("0"))) {
+					p.sendMessage(Main.c((Main.getInstance().getConfig().getString("messages.spawncmd.teleporting"))));
+				}
 			}
-		} else {
+		} else if (!(Main.getInstance().getConfig().getString("messages.spawncmd.disabled").equals("0"))) {
 			sender.sendMessage(Main.c((Main.getInstance().getConfig().getString("messages.spawncmd.disabled"))));
 		}
 		return false;
