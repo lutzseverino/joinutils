@@ -1,0 +1,27 @@
+##############################
+# SimpleSpawn by JasperEdits #
+##############################
+
+spawn:
+   world: yourworld
+   gamemode: survival
+   x: 0
+   y: 0
+   z: 0
+   yaw: 180
+   pitch: 0
+
+modules:
+   motd: true
+   spawnonjoin: true
+   spawncmd: true
+    
+motd:
+   - "&aMOTD example."
+
+messages:
+   spawncmd:
+      onlyplayers: "&cThis command can only be executed by a player."
+      teleporting: "&aTeleporting to spawn."
+      disabled: "&cThis command is disabled."
+      
