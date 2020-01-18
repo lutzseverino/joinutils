@@ -10,6 +10,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 import me.jasperedits.joinutils.JoinUtilsPlugin;
 import me.jasperedits.joinutils.Motd;
+import me.jasperedits.joinutils.StringUtilities;
 
 public class JoinListener  implements Listener {
 
@@ -28,7 +29,7 @@ public class JoinListener  implements Listener {
 
 			if (JoinUtilsPlugin.getInstance().getConfig().getBoolean("modules.motd")) {
 				for (String lineas : Motd.motdMessage) {
-					p.sendMessage(JoinUtilsPlugin.c(lineas));
+					p.sendMessage(StringUtilities.stripColorCores(lineas));
 				}
 			}
 		}

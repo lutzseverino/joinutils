@@ -1,7 +1,6 @@
 package me.jasperedits.joinutils;
 
 
-import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -33,10 +32,6 @@ public class JoinUtilsPlugin extends JavaPlugin {
 	public static JoinUtilsPlugin getInstance() {
 		return instance;
 	}
-
-	public static String c(String c) {
-		return ChatColor.translateAlternateColorCodes('&', c);
-	}
 	
     public static void sendMessageFromConfig(CommandSender p, String node) { 
         node = "messages."+node;
@@ -44,6 +39,6 @@ public class JoinUtilsPlugin extends JavaPlugin {
         if (config.getString(node).equals("0"))
           return;
 
-        p.sendMessage(c(config.getString(node)));
+        p.sendMessage(StringUtilities.stripColorCores(config.getString(node)));
       }
 }

@@ -10,6 +10,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 import me.jasperedits.joinutils.JoinUtilsPlugin;
+import me.jasperedits.joinutils.StringUtilities;
 
 public class SpawnCommand implements CommandExecutor {
 
@@ -26,9 +27,9 @@ public class SpawnCommand implements CommandExecutor {
 					p.teleport(getLocationFromConfig(config));
 					JoinUtilsPlugin.sendMessageFromConfig(p, "spawncmd.teleporting"); // Sends the message if it's enabled.
 				} else if (!(config.getString("messages.spawncmd.nonexistantworldplayer").equals("0"))) { // Checks if the message is disabled or not.
-					p.sendMessage(JoinUtilsPlugin.c(config.getString("messages.spawncmd.nonexistantworldplayer").replace("%world%", config.getString("spawn.world"))));
+					p.sendMessage(StringUtilities.stripColorCores(config.getString("messages.spawncmd.nonexistantworldplayer").replace("%world%", config.getString("spawn.world"))));
 					if (!(config.getString("messages.spawncmd.nonexistantworldconsole")).equals("0"))  // Checks if the message is disabled or not.
-						Bukkit.getConsoleSender().sendMessage(JoinUtilsPlugin.c(config.getString("messages.spawncmd.nonexistantworldconsole")).replace("%world%", config.getString("spawn.world")));
+						Bukkit.getConsoleSender().sendMessage(StringUtilities.stripColorCores(config.getString("messages.spawncmd.nonexistantworldconsole")).replace("%world%", config.getString("spawn.world")));
 				}
 			}
 		} else {
