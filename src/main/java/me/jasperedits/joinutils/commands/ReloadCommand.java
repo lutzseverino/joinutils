@@ -4,17 +4,17 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import me.jasperedits.joinutils.core.Main;
+import me.jasperedits.joinutils.JoinUtilsPlugin;
 
 public class ReloadCommand implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-		if (sender.hasPermission(Main.getInstance().getConfig().getString("permissions.cmdreload"))) {
-			Main.getInstance().reloadConfig();
-			Main.sendMessageFromConfig(sender, "reloadcmd.reloaddone");
+		if (sender.hasPermission(JoinUtilsPlugin.getInstance().getConfig().getString("permissions.cmdreload"))) {
+			JoinUtilsPlugin.getInstance().reloadConfig();
+			JoinUtilsPlugin.sendMessageFromConfig(sender, "reloadcmd.reloaddone");
 		} else {
-			Main.sendMessageFromConfig(sender, "reloadcmd.notenoughpermissions");
+			JoinUtilsPlugin.sendMessageFromConfig(sender, "reloadcmd.notenoughpermissions");
 		}
 		return false;
 	}

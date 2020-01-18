@@ -1,4 +1,4 @@
-package me.jasperedits.joinutils.core;
+package me.jasperedits.joinutils;
 
 import java.util.List;
 
@@ -9,6 +9,6 @@ public class Motd implements Listener {
     public static List<String> motdMessage;
 
     static {
-    	motdMessage = Main.getInstance().getConfig().getStringList("motd");
+    	motdMessage = JoinUtilsPlugin.getInstance().getConfig().getStringList("motd");
     }
 }

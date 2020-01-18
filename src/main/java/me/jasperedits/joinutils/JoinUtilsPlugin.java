@@ -1,4 +1,4 @@
-package me.jasperedits.joinutils.core;
+package me.jasperedits.joinutils;
 
 
 import org.bukkit.ChatColor;
@@ -8,9 +8,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import me.jasperedits.joinutils.events.JoinListener;
 
-public class Main extends JavaPlugin {
+public class JoinUtilsPlugin extends JavaPlugin {
 
-	private static Main instance;
+	private static JoinUtilsPlugin instance;
 
 	public void onEnable() {
 		saveDefaultConfig();
@@ -30,7 +30,7 @@ public class Main extends JavaPlugin {
 				+ "§8§m-------------------------------------------");
 	}
 
-	public static Main getInstance() {
+	public static JoinUtilsPlugin getInstance() {
 		return instance;
 	}
 
