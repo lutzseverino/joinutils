@@ -1,7 +1,7 @@
 name: JoinUtils
 author: JasperEdits
 version: 1.1.2
-main: me.jasperedits.joinutils.core.Main
+main: me.jasperedits.joinutils.Main
 description: A very simple spawn-on-join plugin, with some extra features.
 
 commands:
