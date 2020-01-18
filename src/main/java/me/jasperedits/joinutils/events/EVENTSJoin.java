@@ -1,4 +1,4 @@
-package me.jasperedits.simplespawn.events;
+package me.jasperedits.joinutils.events;
 
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -8,8 +8,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-import me.jasperedits.simplespawn.core.Main;
-import me.jasperedits.simplespawn.core.Motd;
+import me.jasperedits.joinutils.core.Main;
+import me.jasperedits.joinutils.core.Motd;
 
 public class EVENTSJoin  implements Listener {
 

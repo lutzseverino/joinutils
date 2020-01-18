@@ -1,4 +1,4 @@
-package me.jasperedits.simplespawn.commands;
+package me.jasperedits.joinutils.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.jasperedits.simplespawn.core.Main;
+import me.jasperedits.joinutils.core.Main;
 
 public class CMDSpawn implements CommandExecutor {
 

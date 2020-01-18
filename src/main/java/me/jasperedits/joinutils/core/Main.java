@@ -1,10 +1,10 @@
-package me.jasperedits.simplespawn.core;
+package me.jasperedits.joinutils.core;
 
 
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.jasperedits.simplespawn.events.EVENTSJoin;
+import me.jasperedits.joinutils.events.EVENTSJoin;
 
 public class Main extends JavaPlugin {
 
@@ -17,7 +17,7 @@ public class Main extends JavaPlugin {
 		getServer().getConsoleSender().sendMessage("\n§8§m-------------------------------------------"
 				+ "\n\n§aSimpleSpawn enabled.\n\n"
 				+ "§8§m-------------------------------------------");
-		getCommand("spawn").setExecutor(new me.jasperedits.simplespawn.commands.CMDSpawn());
+		getCommand("spawn").setExecutor(new me.jasperedits.joinutils.commands.CMDSpawn());
 		getServer().getPluginManager().registerEvents(new EVENTSJoin(), this);
 	}
 

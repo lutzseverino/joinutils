@@ -1,4 +1,4 @@
-package me.jasperedits.simplespawn.core;
+package me.jasperedits.joinutils.core;
 
 import java.util.List;
 
