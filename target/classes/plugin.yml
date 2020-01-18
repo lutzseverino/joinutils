@@ -7,4 +7,5 @@ description: A very simple spawn-on-join plugin, with some extra features.
 commands:
   spawn:
      aliases: []
-  
+  jureload:
+     aliases: [joinutilsreload, joinutilitiesreload]

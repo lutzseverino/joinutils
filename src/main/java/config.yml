@@ -25,4 +25,11 @@ messages: # Set it to "0" or 0 to disable the message.
       onlyplayers: "&cThis command can only be executed by a player."
       teleporting: "&aTeleporting to spawn."
       disabled: "&cThis command is disabled."
-      
+      nonexistantworldplayer: "&cThe plugin tried to teleport you to a non-existant world (&e%world%&c)"
+      nonexistantworldconsole: "&4WARNING: &cThe world set in config DOES NOT exist. (&e%world%&c)"
+   reloadcmd:
+      reloaddone: "&aConfiguration reloaded."
+      notenoughpermissions: "&cYou don't have enough permissions"
+
+permissions:
+   cmdreload: joinutils.cmd.reload
