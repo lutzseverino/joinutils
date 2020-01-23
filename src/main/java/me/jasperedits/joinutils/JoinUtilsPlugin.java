@@ -5,7 +5,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import me.jasperedits.joinutils.events.JoinListener;
+import me.jasperedits.joinutils.listeners.JoinListener;
 
 public class JoinUtilsPlugin extends JavaPlugin {
 

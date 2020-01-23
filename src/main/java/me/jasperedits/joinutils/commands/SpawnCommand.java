@@ -17,10 +17,12 @@ public class SpawnCommand implements CommandExecutor {
 	@Override 
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		FileConfiguration config = JoinUtilsPlugin.getInstance().getConfig();
-		if (JoinUtilsPlugin.getInstance().getConfig().getBoolean("modules.spawncmd")) {
-			if (!(sender instanceof Player)) {
+		if (!(JoinUtilsPlugin.getInstance().getConfig().getBoolean("modules.spawncmd"))) 
+			JoinUtilsPlugin.sendMessageFromConfig(sender, "spawncmd.disabled");
+		else {
+			if (!(sender instanceof Player))
 				JoinUtilsPlugin.sendMessageFromConfig(sender, "spawncmd.onlyplayers");
-			} else {
+			else {
 				Player p = (Player) sender;
 				World w = Bukkit.getWorld(config.getString("spawn.world"));
 				if (w != null) {
@@ -32,8 +34,6 @@ public class SpawnCommand implements CommandExecutor {
 						Bukkit.getConsoleSender().sendMessage(StringUtilities.stripColorCores(config.getString("messages.spawncmd.nonexistantworldconsole")).replace("%world%", config.getString("spawn.world")));
 				}
 			}
-		} else {
-			JoinUtilsPlugin.sendMessageFromConfig(sender, "spawncmd.disabled");
 		}
 		return false;
 	}

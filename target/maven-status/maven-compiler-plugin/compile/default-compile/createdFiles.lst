@@ -1,0 +1,6 @@
+me\jasperedits\joinutils\Motd.class
+me\jasperedits\joinutils\commands\SpawnCommand.class
+me\jasperedits\joinutils\StringUtilities.class
+me\jasperedits\joinutils\commands\ReloadCommand.class
+me\jasperedits\joinutils\listeners\JoinListener.class
+me\jasperedits\joinutils\JoinUtilsPlugin.class
